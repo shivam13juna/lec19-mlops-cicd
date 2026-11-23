@@ -45,7 +45,7 @@ def score(booster, X, y):
 
 def old_from_main():
     """The model on main, read out of Git without touching the working tree."""
-    blob = subprocess.run(["git", "show", "origin/main:candidate/model.tar.gz"],
+    blob = subprocess.run(["git", "show", "origin/master:candidate/model.tar.gz"],
                           capture_output=True, check=True).stdout
     path = Path(tempfile.mkdtemp()) / "old.tar.gz"
     path.write_bytes(blob)
