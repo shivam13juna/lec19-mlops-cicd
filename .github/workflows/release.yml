@@ -6,7 +6,7 @@ name: Release the model
 on:
   pull_request:               # every pull request, so the required gate check always reports
   push:
-    branches: [main]
+    branches: [master]
     paths: [candidate/**]       # a merge that leaves the model alone releases nothing
   workflow_dispatch:
 
